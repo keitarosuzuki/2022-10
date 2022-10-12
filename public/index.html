@@ -13,53 +13,21 @@
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+    <script>
+        alert("仕掛中！！");
+    </script>
     <script type="module" src="js/firebase.js"></script>
     <script type="module" src="js/ui.js"></script>
     <title>Hello, world!</title>
     <style>
-        .table-area{
+        .table-area {
             margin: 10% 20%;
         }
     </style>
 </head>
 
 <body>
-    <div class="table-area">
-        <table class="table table-hover table-border">
-            <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>@twitter</td>
-                    <td>Bird</td>
-                </tr>
-                <tr class="table-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    <th scope="row"></th>
-                    <td colspan="3">追加する</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+    <div class="table-area" id="tableArea"></div>
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -70,11 +38,17 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    ...
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="id" aria-label="id">
+                        <input type="text" class="form-control" placeholder="name" aria-label="name">
+                        <input type="text" class="form-control" placeholder="part" aria-label="part">
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-primary">追加</button>
+                    <button type="button" class="btn btn-success">更新</button>
+                    <button type="button" class="btn btn-warning">削除</button>
                 </div>
             </div>
         </div>
